@@ -1,0 +1,9 @@
+.container {
+  width: 80%;
+  max-width: 500px;
+  height: 80vh;
+  border: 1px solid dodgerblue;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding-top: 30px;
+}

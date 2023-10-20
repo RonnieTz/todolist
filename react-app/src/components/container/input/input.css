@@ -1,0 +1,48 @@
+.input-container {
+  width: 70%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+}
+
+.input {
+  height: 70%;
+  width: 100%;
+  border-radius: 25px;
+  border: none;
+  background-color: rgb(192, 233, 242);
+  text-align: center;
+  font-size: large;
+}
+
+.input:focus {
+  background-color: rgb(102, 213, 238);
+  outline: none;
+  transition: 0.2s;
+}
+
+.button {
+  position: absolute;
+  right: 0;
+  height: calc(70% + 2px);
+  width: 80px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgb(6, 6, 151);
+  color: azure;
+  cursor: pointer;
+  font-size: larger;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background-color: rgb(8, 8, 216);
+}
+
+.input-container:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+}

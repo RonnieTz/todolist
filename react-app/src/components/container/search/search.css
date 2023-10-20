@@ -1,0 +1,30 @@
+.search-container {
+  width: 70%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+}
+
+.search {
+  height: 70%;
+  width: 100%;
+  border-radius: 25px;
+  border: none;
+  background-color: rgb(192, 233, 242);
+  font-size: large;
+  text-align: center;
+}
+
+.search:focus {
+  background-color: rgb(102, 213, 238);
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-container:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+}
