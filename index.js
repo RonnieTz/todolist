@@ -11,6 +11,8 @@ mongoose
     console.log("connected to database");
   });
 
+const ItemSchema = mongoose.Schema({ name: String, checked: Boolean });
+
 app.use(express.static("react-app/dist"));
 app.use(cors({ origin: "*" }));
 
