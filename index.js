@@ -3,6 +3,14 @@ const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
 
+mongoose
+  .connect(
+    "mongodb+srv://ronistzolis:adslgr@cluster0.pwpagi7.mongodb.net/?retryWrites=true&w=majority"
+  )
+  .then(() => {
+    console.log("connected to database");
+  });
+
 app.use(express.static("react-app/dist"));
 app.use(cors({ origin: "*" }));
 
