@@ -3,14 +3,14 @@ import { initialState } from "./initialState";
 import axios from "axios";
 
 export const fetchItems = createAsyncThunk("/list/fethItems", async () => {
-  const res = await axios.get("http://localhost:3000/api/get-items");
+  const res = await axios.get("/api/get-items");
   return res.data;
 });
 
 export const postItem = createAsyncThunk(
   "list/postItem",
   async (name: string) => {
-    const res = await axios.post("http://localhost:3000/api/save-item", {
+    const res = await axios.post("/api/save-item", {
       name,
     });
     return res.data;
@@ -20,9 +20,7 @@ export const postItem = createAsyncThunk(
 export const removeItem = createAsyncThunk(
   "list/deleteItem",
   async (id: string) => {
-    const res = await axios.delete(
-      `http://localhost:3000/api/delete-item?id=${id}`
-    );
+    const res = await axios.delete(`/api/delete-item?id=${id}`);
     return res.data;
   }
 );
@@ -31,7 +29,7 @@ export const checkItem = createAsyncThunk(
   "list/checkItem",
   async ({ id, checked }: { id: string; checked: boolean }) => {
     const res = await axios.patch(
-      `http://localhost:3000/api/check-item?id=${id}&checked=${checked}`
+      `/api/check-item?id=${id}&checked=${checked}`
     );
     console.log(res.data);
   }
